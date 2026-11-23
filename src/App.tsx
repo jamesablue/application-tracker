@@ -126,14 +126,11 @@ function WorkspaceHeading() {
     <div className="workspace-heading">
       <div>
         <div className="title-row">
-          <h2>Applications</h2>
+          <h2 id="applications-title">Applications</h2>
         </div>
         <div className="workspace-heading__subtitle">
           <p>Track your job applications and their statuses.</p>
         </div>
-      </div>
-      <div className="workspace-heading__actions">
-        <button className="button button--primary">Refresh</button>
       </div>
     </div>
   )

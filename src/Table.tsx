@@ -12,7 +12,6 @@ export function Table({
 }) {
   return (
     <div>
-      <h1>Table</h1>
       <table>
         <caption className="sr-only">Job applications</caption>
         <thead>
@@ -40,7 +39,6 @@ export function Table({
             </th>
             <th>Location</th>
             <th>Salary range</th>
-            <th>Details</th>
           </tr>
         </thead>
         <tbody>
@@ -57,7 +55,6 @@ export function Table({
                 {app.location} ({app.arrangement})
               </td>
               <td>{formatSalary(app.salary)}</td>
-              <td>{/* e.g. a "View" button later */}</td>
             </tr>
           ))}
         </tbody>
