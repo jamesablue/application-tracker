@@ -1,4 +1,4 @@
-import { PAGE_SIZES, type PageSize } from "./types";
+import { PAGE_SIZES, type PageSize } from './types'
 
 export function Pagination({
   page,
@@ -13,9 +13,9 @@ export function Pagination({
   setPage: (page: number) => void
   setPageSize: (size: PageSize) => void
 }) {
-  const pageCount = Math.max(1, Math.ceil(total / pageSize));
-  const first = total === 0 ? 0 : (page - 1) * pageSize + 1;
-  const last = Math.min(page * pageSize, total);
+  const pageCount = Math.max(1, Math.ceil(total / pageSize))
+  const first = total === 0 ? 0 : (page - 1) * pageSize + 1
+  const last = Math.min(page * pageSize, total)
 
   return (
     <nav className="pagination" aria-label="Pagination">
