@@ -785,7 +785,6 @@ strong {
     grid-column: 1;
     grid-row: 2;
     font-size: 0.875rem;
-    padding-left: 46px;
   }
   td:nth-child(4) .secondary {
     font-size: 0.875rem;
@@ -793,7 +792,6 @@ strong {
   td:nth-child(5) {
     grid-column: 1;
     grid-row: 3;
-    padding-left: 46px;
     font-size: 0.875rem;
   }
   td:nth-child(6) {
