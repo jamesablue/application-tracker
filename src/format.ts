@@ -13,5 +13,11 @@ export function formatDate(date: string | null): string {
 export function formatSalary(salary: Application['salary']): string {
   if (!salary) return 'Not recorded'
   const { min, max, currency, period } = salary
-  return `${currency} ${min?.toLocaleString()} - ${max?.toLocaleString()} / ${period}`
+  let amount: string
+  if (min != null && max != null)
+    amount = `${min.toLocaleString()} - ${max.toLocaleString()}`
+  else if (min != null) amount = `from ${min.toLocaleString()}`
+  else if (max != null) amount = `up to ${max.toLocaleString()}`
+  else return 'Not recorded'
+  return `${currency} ${amount} / ${period}`
 }
