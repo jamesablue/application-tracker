@@ -1,5 +1,5 @@
 import type { Application, SortOrder } from './types'
-import { formatSalary } from './format'
+import { formatDate, formatSalary } from './format'
 
 export function Table({
   applications,
@@ -49,8 +49,10 @@ export function Table({
                 <br />
                 {app.role}
               </td>
-              <td>{app.status}</td>
-              <td>{app.dateApplied}</td>
+              <td>
+                <Status status={app.status} />
+              </td>
+              <td>{formatDate(app.dateApplied)}</td>
               <td>
                 {app.location} ({app.arrangement})
               </td>

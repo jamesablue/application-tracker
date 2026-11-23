@@ -7,6 +7,8 @@ export function formatDate(date: string | null): string {
     year: 'numeric',
     month: 'short',
     day: 'numeric',
+    // "2026-11-22" parses as UTC midnight; format in UTC so it isn't shown as Nov 21
+    timeZone: 'UTC',
   })
 }
 
